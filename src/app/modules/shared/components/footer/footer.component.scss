@@ -1,0 +1,31 @@
+@import './../../../../../variables.scss';
+.app-footer {
+  background-color: $docker-footer;
+}
+.app-footer__container {
+  @include alignBlock;
+  color: $white;
+  display: flex;
+  justify-content: center;
+}
+.app-footer__resources-container,
+.app-footer__help-container,
+.app-footer__community-container {
+  margin: 20px 40px;
+}
+
+.app-footer__list-items {
+  padding: 0;
+  margin: 0;
+}
+
+.app-footer__list-item {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.app-footer__powered-by {
+  @include alignBlock;
+  text-align: center;
+  color: $white;
+  padding-bottom: 40px;
+}

@@ -1,0 +1,28 @@
+<section class="login">
+  <div class="login__container">
+    <h1 class="login__header">Login to your account</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login__form">
+      <div class="form-group">
+        <label class="form-label">
+          Phone Number
+        </label>
+        <input 
+          class="login__form-input"
+          formControlName="phone"
+          type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label">
+          Your Password
+        </label>
+        <input 
+          class="login__form-input" 
+          type="password"
+          formControlName="password">
+      </div>
+      <button type="sumbit" class="login__form-submit-btn">
+        Login
+      </button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<header class="app-header">
+  <div class="app-header__container">
+    <h1 class="app-header__logo" routerLink="/home">Logo</h1>
+    <nav class="app-header__nav">
+      <ul class="app-header__menu">
+        <li class="app-header__menu-item" routerLink="/home" *ngIf="!isAuth">Home</li>
+        <li class="app-header__menu-item" routerLink="/create-account" *ngIf="!isAuth">Signup</li>
+        <li class="app-header__menu-item" routerLink="/login" *ngIf="!isAuth">Login</li>
+        <li class="app-header__menu-item" routerLink="/dashboard" *ngIf="isAuth">Dashboard</li>
+        <li class="app-header__menu-item" routerLink="/account-settings" *ngIf="isAuth">Account Settings</li>
+        <li class="app-header__menu-item" routerLink="/logout" (click)="onLogout()" *ngIf="isAuth">Logout</li>
+      </ul>
+    </nav>
+  </div>
+</header>

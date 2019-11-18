@@ -1,0 +1,40 @@
+/*ngrx style*/
+$background-color: #a829c3;
+$body-color: #fafafa;
+$secondary-color: #412846;
+$text-color: rgba(0, 0, 0, 0.87);
+
+/*Docker combo*/
+$docker-background: #e9ebee;
+$docker-primary: #2496ed;
+$white: #fff;
+$docker-footer: #022144;
+
+@mixin alignBlock {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 92px;
+}
+
+@mixin primary-btn {
+  background-color: $docker-primary;
+  color: $white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: 1px solid $docker-primary;
+}
+@mixin danger-btn {
+  color: $white;
+  padding: 10px 20px;
+  border: 1px solid red;
+  background-color: red;
+  font-weight: bold;
+}
+@mixin  secondary-btn {
+  border: 1px solid $docker-primary;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: $docker-primary;
+  font-weight: bold;
+}

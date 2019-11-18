@@ -1,0 +1,27 @@
+<section class="dashboard">
+  <div class="dashboard__container">
+    <h2 class="dashboard__heading">Dashboard</h2>
+    <p class="dashboard__text">You may create up to 5 checks</p>
+    <table class="dashboard__table">
+      <thead>
+        <tr>
+          <td>Method</td>
+          <td>Protocol</td>
+          <td>Url</td>
+          <td>State</td>
+          <td>Details</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let check of checks$ | async">
+            <td>{{check.method}}</td>
+            <td>{{check.protocol}}</td>
+            <td>{{check.url}}</td>
+            <td>{{check.state}}</td>
+            <td><a [routerLink]="['/edit-check', check.id]" (click)="editCheck(check.id)">view/edit/delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dashboard__create-check-btn" routerLink="/create-check">Create a Check</button>
+  </div>
+</section>

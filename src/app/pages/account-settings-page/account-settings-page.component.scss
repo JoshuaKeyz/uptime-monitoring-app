@@ -1,0 +1,54 @@
+@import '../../../variables.scss';
+
+.account-settings {
+  &__container {
+    @include alignBlock;
+    height: 1000px;
+    padding-top: 100px;
+  }
+  &__main-header {
+    text-align: center;
+  }
+  &__form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__back-btn {
+    @include secondary-btn;
+    font-weight: bold;
+  }
+  &__form-group {
+    width: 500px;
+    margin: 10px 0;
+  }
+  &__form-control {
+    display: block;
+    width: 100%;
+    height: 30px;
+  }
+  &__save-changes-btn {
+    margin: 20px 0 30px;
+    @include primary-btn;
+  }
+  &__delete-warning-msg {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__delete-check-btn {
+    @include danger-btn;
+  }
+  &__change-password-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__delete-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

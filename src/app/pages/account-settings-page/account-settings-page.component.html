@@ -1,0 +1,43 @@
+<section class="account-settings">
+  <div class="account-settings__container">
+    <h2 class="account-settings__main-header">Account Settings</h2>
+    <div class="account-settings__nav">
+      <button class="account-settings__back-btn">Back</button>
+    </div>
+    <hr>
+    <form [formGroup]="accountSettingsForm" (ngSubmit)="onUpdateUserName()" class="account-settings__form">
+      <div class="account-settings__form-group">
+        <label>Phone Number</label>
+        <input type="text" formControlName="phone" class="account-settings__form-control">
+      </div>
+      <div class="account-settings__form-group">
+        <label>First name</label>
+        <input type="text" formControlName="firstName" class="account-settings__form-control">
+      </div>
+      <div class="account-settings__form-group">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName" class="account-settings__form-control">
+      </div>
+      <button class="account-settings__save-changes-btn">
+        Save Changes
+      </button>
+    </form>
+    <hr>
+    <section class="account-settings__change-password-section">
+      <h2 class="account-settings__main-header">Change your password</h2>
+      <form [formGroup]="changePasswordForm" (ngSubmit)="onUpdateUserPassword()">
+        <div class="account-settings__form-group">
+          <label>Choose a new password</label>
+          <input formControlName="password" type="text" class="account-settings__form-control">
+        </div>
+        <button class="account-settings__delete-check-btn">Save Password</button>
+      </form>
+    </section>
+    <hr>
+    <section class="account-settings__delete-section">
+      <h2 class="account-settings__main-header">Delete your Account</h2>
+      <p class="account-settings__delete-warning-msg">Warning: Once this step is taken it cannot be undone!!!</p>
+      <button class="account-settings__delete-check-btn" (click)="onDeleteUserAccount()">Delete Account</button>
+    </section>
+  </div>
+</section>

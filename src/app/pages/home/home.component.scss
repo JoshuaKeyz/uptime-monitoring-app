@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+
+.hero-area {
+  margin-top: 0;
+  height: 800px;
+  // background-image: url(https://www.docker.com/sites/all/themes/docker/assets/images/backgrounds/homepage-platform-hero-bg-xlg.png);
+  background-size: cover;
+  &__container {
+    @include alignBlock;
+    width: 100%;
+  }
+  display: flex;
+}
+.hero-area-heading {
+  margin-top: 300px;
+}
+.hero-area__get-started-btn {
+  @include primary-btn;
+}
+.hero-area__login-btn {
+  @include secondary-btn;
+  margin-left: 10px;
+}

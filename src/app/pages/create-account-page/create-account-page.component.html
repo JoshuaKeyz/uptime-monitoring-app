@@ -1,0 +1,56 @@
+<section class="create-account">
+  <div class="create-account__container">
+    <h2>Create Account</h2>
+    <form [formGroup]="createAccountForm" (ngSubmit)="createUser()" class="create-account__form">
+      <div class="create-account__form-group">
+        <label>
+          First Name
+        </label>
+        <input 
+          type="text" 
+          class="create-account__form-control"
+          formControlName="firstName">
+      </div>
+      <div class="create-account__form-group">
+        <label>
+          Last Name
+        </label>
+        <input 
+          type="text" 
+          class="create-account__form-control"
+          formControlName="lastName">
+      </div>
+      <div class="create-account__form-group">
+        <label>
+          Phone
+        </label>
+        <input 
+          type="text" 
+          class="create-account__form-control"
+          formControlName="phone"
+          >
+      </div>
+      <div class="create-account__form-group">
+        <label>
+          Password
+        </label>
+        <input 
+          type="password" 
+          class="create-account__form-control"
+          formControlName="password">
+      </div>
+      <div class="create-account__form-group">
+        <input
+          type="checkbox" 
+          class="create-account__form-checkbox"
+          formControlName="tosAgreement">
+        <label>
+          Do you agree with terms
+        </label>
+      </div>
+      <button 
+        class="create-account__submit-btn"
+        [disabled]="createAccountForm.invalid">Get Started</button>
+    </form>
+  </div>
+</section>

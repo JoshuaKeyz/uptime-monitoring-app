@@ -1,0 +1,6 @@
+<span *ngFor="let status of statusCodes; let index=index" class="create-check__form-status-codes">
+  <label>
+    <input type="checkbox" (click)="checkBoxAction($event, index)" [checked]="status.value" class="create-check__form-checkbox">
+    {{status.status}}
+  </label>
+</span>

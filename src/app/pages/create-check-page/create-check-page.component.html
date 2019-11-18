@@ -1,0 +1,50 @@
+<section class="create-check">
+    <div class="create-check__container">
+      <h2 class="create-check__main-header">Check Details</h2>
+      <div class="create-check__nav">
+        <button class="create-check__back-btn">Back</button>
+      </div>
+      <hr>
+      <form [formGroup]="createCheckForm" (ngSubmit)="onSubmit()" class="create-check__form">
+        <div class="create-check__form-group">
+          <label>Protocol</label>
+          <select formControlName="protocol" class="create-check__form-control">
+            <option value="HTTP">HTTP</option>
+            <option value="HTTPS">HTTPS</option>
+          </select>
+          <!-- <input type="text" class="create-check__form-control"> -->
+        </div>
+        <div class="create-check__form-group">
+          <label>URL(not including protocol)</label>
+          <input type="text" formControlName="url" class="create-check__form-control">
+        </div>
+        <div class="create-check__form-group">
+          Success Codes (HTTP codes that should represent 'up')
+          <div>
+            <app-status-codes formControlName="successCodes"></app-status-codes>
+          </div>
+        </div>
+        <div class="create-check__form-group">
+          <label>HTTP Method</label>
+          <select formControlName="method" class="create-check__form-control">
+            <option value="GET">GET</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+            <option value="OPTIONS">OPTIONS</option>
+            <option value="POST">POST</option>
+            <option value="PATCH">PATCH</option>
+            <option value="HEAD">HEAD</option>
+            <option value="CONNECT">CONNECT</option>
+            <option value="TRACE">TRACE</option>
+          </select>
+        </div>
+        <div class="create-check__form-group">
+          <label>Timeout (in seconds)</label>
+          <input formControlName="timeoutSeconds" type="number" class="create-check__form-control">
+        </div>
+        <button class="create-check__save-changes-btn" [disabled]="createCheckForm.invalid">
+          Create Check
+        </button>
+      </form>
+    </div>
+  </section>

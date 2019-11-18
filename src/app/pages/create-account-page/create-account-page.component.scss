@@ -1,0 +1,26 @@
+@import '../../../variables.scss';
+
+.create-account {
+  height: 800px;
+}
+.create-account__container {
+  @include alignBlock;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.create-account__form {
+  width: 500px;
+}
+.create-account__form-group {
+  margin: 20px 0;
+}
+.create-account__form-control {
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+.create-account__submit-btn {
+  @include primary-btn;
+}

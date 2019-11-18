@@ -1,0 +1,55 @@
+<section class="edit-check">
+  <div class="edit-check__container">
+    <h2 class="edit-check__main-header">Check Details</h2>
+    <div class="edit-check__nav">
+      <button class="edit-check__back-btn">Back</button>
+    </div>
+    <hr>
+    <form [formGroup]="editCheckForm" class="edit-check__form" (ngSubmit)="onEditCheck()">
+      <div class="edit-check__form-group">
+        <label>Check ID</label>
+        <input type="text" formControlName="id" class="edit-check__form-control">
+      </div>
+      <div class="edit-check__form-group">
+        <label>Protocol</label>
+        <select formControlName="protocol" class="edit-check__form-control">
+          <option value="HTTP">HTTP</option>
+          <option value="HTTPS">HTTPS</option>
+        </select>
+        <!-- <input type="text" class="create-check__form-control"> -->
+      </div>
+      <div class="edit-check__form-group">
+        <label>URL(not including protocol)</label>
+        <input type="text" formControlName="url" class="edit-check__form-control">
+      </div>
+      <div class="edit-check__form-group">
+        Success Codes (HTTP codes that should represent 'up')
+        <div>
+          <app-status-codes formControlName="successCodes"></app-status-codes>
+        </div>
+      </div>
+      <div class="edit-check__form-group">
+        <label>HTTP Method</label>
+        <select formControlName="method" class="edit-check__form-control">
+          <option value="GET">GET</option>
+          <option value="PUT">PUT</option>
+          <option value="DELETE">DELETE</option>
+          <option value="POST">POST</option>
+        </select>
+      </div>
+      <div class="edit-check__form-group">
+        <label>Timeout</label>
+        <input formControlName="timeoutSeconds" type="number" max="5" class="edit-check__form-control">
+      </div>
+      <button class="edit-check__save-changes-btn">
+        Save Changes
+      </button>
+    </form>
+    <hr>
+    <section class="edit-check__delete-section">
+      <h2 class="edit-check__main-header">Delete the check</h2>
+      <p class="edit-check__delete-warning-msg">Warning: Once this step is taken it cannot be undone!!!</p>
+      <button class="edit-check__delete-check-btn" (click)="onDeleteCheck()">Delete the Check</button>
+    </section>
+  </div>
+</section>
